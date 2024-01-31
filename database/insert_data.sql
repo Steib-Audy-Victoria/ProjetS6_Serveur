@@ -1,14 +1,12 @@
 -- Insertion de données dans la table Utilisateurs
-INSERT INTO Utilisateurs (Nom, Prenom, Email, MotDePasse, PaysID)
+INSERT INTO Utilisateurs (NomUser, Email, MotDePasse, PaysID)
 VALUES (
-        'Dupont',
         'Pierre',
         'dupont.pierre@email.com',
         'motdepasse123',
         1
     ),
     (
-        'Suzuki',
         'Yuki',
         'suzuki.yuki@email.com',
         'password456',

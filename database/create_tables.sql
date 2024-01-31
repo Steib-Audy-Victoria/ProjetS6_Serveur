@@ -1,8 +1,7 @@
 -- Table Utilisateurs
 CREATE TABLE Utilisateurs (
     UserID INTEGER PRIMARY KEY,
-    Nom VARCHAR(255) NOT NULL,
-    Prenom VARCHAR(255) NOT NULL,
+    NomUser VARCHAR(255) NOT NULL,
     Email VARCHAR(255) NOT NULL,
     MotDePasse VARCHAR(255) NOT NULL,
     DateInscription DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,

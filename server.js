@@ -46,12 +46,12 @@ app.get('/help-contact', (req, res) => {
 // ----- CONNEXION / INSCRIPTION -----
 
 app.post('/inscription', (req, res) => {
-  const { Nom, Prenom, Email, MotDePasse, PaysID } = req.body;
+  const { NomUser, Email, MotDePasse, PaysID } = req.body;
 
   const hashMotDePasse = bcrypt.hashSync(MotDePasse, 10);
 
-  const query = 'INSERT INTO Utilisateurs (Nom, Prenom, Email, MotDePasse, PaysID) VALUES (?, ?, ?, ?, ?)';
-  db.run(query, [Nom, Prenom, Email, hashMotDePasse, PaysID], function (err) {
+  const query = 'INSERT INTO Utilisateurs (NomUser, Email, MotDePasse, PaysID) VALUES (?, ?, ?, ?)';
+  db.run(query, [NomUser, Email, hashMotDePasse, PaysID], function (err) {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -67,10 +67,10 @@ app.post('/inscription', (req, res) => {
 });
 
 app.post('/connexion', (req, res) => {
-  const { Email, MotDePasse } = req.body;
+  const { NomUser, MotDePasse } = req.body;
 
-  const query = `SELECT * FROM Utilisateurs WHERE Email = ?`;
-  db.get(query, [Email], (err, Utilisateur) => {
+  const query = `SELECT * FROM Utilisateurs WHERE NomUser = ?`;
+  db.get(query, [NomUser], (err, Utilisateur) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
