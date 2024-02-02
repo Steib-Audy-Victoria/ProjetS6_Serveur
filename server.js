@@ -32,7 +32,7 @@ const db = new sqlite3.Database('./database/AutoDB.db', (err) => {
 
 // Define the API endpoints
 app.get('/', (req, res) => {
-    res.redirect('/auto');
+    res.redirect('/pays');
 });
 
 // Define a route for help and contact
