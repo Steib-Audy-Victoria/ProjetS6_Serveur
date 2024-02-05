@@ -131,6 +131,28 @@ app.get('/pays', (req, res) => {
   });
 });
 
+
+// Récupérer toutes les infos du pays par le nom du pays
+app.get('/pays/nom/:NomPays', (req, res) => {
+  const NomPays = req.params.NomPays;
+
+  const query = 'SELECT * FROM Pays WHERE NomPays = ?';
+  db.get(query, [NomPays], (err, result) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    if (!result) {
+      return res.status(404).json({ error: 'Pays non trouvé' });
+    }
+
+    res.json(result);
+  });
+});
+
+
+
+
 // ----------------------------------------
 
 
