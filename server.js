@@ -192,7 +192,25 @@ app.get('/marque/:id', (req, res) => {
   });
 });
 
+// ----------Liste des voitures --------------
 
+// Récupérer les détails de la voiture par ID
+app.get('/voiture/:id', (req, res) => {
+  const id = req.params.id;
+
+  const query = 'SELECT * FROM Voitures WHERE VoitureID = ?';
+  db.get(query, [id], (err, voiture) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    if (!voiture) {
+      return res.status(404).json({ error: 'Voiture non trouvée' });
+    }
+
+    res.json(voiture);
+  });
+});
 
 
 
