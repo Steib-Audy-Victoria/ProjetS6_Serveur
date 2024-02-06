@@ -156,7 +156,18 @@ app.get('/pays/nom/:NomPays', (req, res) => {
       // Ajoutez les marques de voiture aux détails du pays
       result.marques = marques;
 
-    res.json(result);
+      // Requête SQL pour récupérer les voitures correspondant au pays
+      const queryVoitures = 'SELECT * FROM Voitures WHERE NomPays = ?';
+      db.all(queryVoitures, [NomPays], (err, voitures) => {
+        if (err) {
+          return res.status(500).json({ error: err.message });
+        }
+
+        // Ajoutez les voitures aux détails du pays
+        result.voitures = voitures;
+
+        res.json(result);
+      });
     });
   });
 });

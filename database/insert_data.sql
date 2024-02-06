@@ -2160,31 +2160,75 @@ VALUES (
     );
 -- Insertion de données dans la table Voitures
 INSERT INTO Voitures (
-        imgVoiture,
-        Info,
         Marque,
         Modele,
-        AnneeFabrication,
-        Carburant,
+        Info,
+        imgVoiture,
+        AnneeDebutFabrication,
+        AnneeFinFabrication,
         NomPays
     )
 VALUES (
-        ' lien_image_voiture.jpg ',
-        ' Informations sur la voiture ',
-        ' Renault ',
-        ' Clio ',
-        2020,
-        ' Essence ',
+        'Renault',
+        'Clio',
+        'La Renault Clio est une gamme d''automobile polyvalente du constructeur français Renault. Elle est lancée en 1990 (Clio I) pour succéder à la Renault Supercinq, puis en 1998 (Clio II), en 2005 (Clio III), renouvelée en 2012 (Clio IV) et en 2019 (Clio V). 
+        Ajourd''hui, la Clio n''est plus produite en France mais uniquement en Turquie et en Slovénie alors que l''usine de Flins produisait historiquement la Clio. 
+        La cinquième génération de Renault Clio est basée sur la plate-forme modulaire CMF-B « high spec » utilisée par les autos compactes de l''alliance Renault-Nissan. 
+        La Clio V reçoit de nouvelles motorisations, à savoir : En essence les 3-cylindres 1,0 litre TCe de 100 ch et 4 cylindres 1,3 litre TCe de 130 ch, ainsi que le 3-cylindres 1,0 litre SCe de 65 ou 75 ch provenant de sa prédécesseure. 
+        En diesel, le 4-cylindres 1,5 litre Blue dCi est reconduit avec des puissances de 85 et 115 ch. La production des moteurs diesel est arrêtée à partir du mois de décembre 2020 avant de reprendre mi-2021 dans une version 100 ch Euro 6d Full (avec AdBlue).
+        À partir de février 2020, le 1.0 TCe 100 est disponible avec une boîte CVT ou en version GPL. En 2021, pour respecter les nouvelles normes antipollution, le TCE 100 ch passe à 90 ch en boîte manuelle à 6 rapports contre 5 auparavant et gagne un filtre à particules.
+        Une version E-Tech Hybrid est proposée depuis janvier 2020. Elle est équipée d''un moteur 1,6 litre 91 ch H4M Renault-Nissan, à cycle de combustion Atkinson, associé à un alterno-démarreur de 20 ch et un moteur électrique de 48 ch, pour une puissance cumulée de 140 ch.',
+        'https://upload.wikimedia.org/wikipedia/commons/5/59/Renault_Clio_V_Genf_2019_1Y7A5590.jpg',
+        1990,
+        0,
         'France'
     ),
     (
-        ' lien_image_voiture.jpg ',
-        ' Informations sur la voiture ',
-        ' Toyota ',
-        ' Corolla ',
-        2019,
-        ' Essence ',
-        'Japon'
+        'Peugeot',
+        '208',
+        'La Peugeot 208 est une automobile citadine du constructeur français Peugeot. Elle est présentée au salon de Genève 2012 et commercialisée à partir de mars 2012. Elle remplace la Peugeot 207. 
+        Peugeot 208 peut désigner deux modèles automobiles : La Peugeot 208 I (2012-2019 en Europe, jusqu''en 2020 au Brésil) ou La Peugeot 208 II (depuis 2019). 
+        La 208 n''est plus produite en France dans son usine historique de Mulhouse et de Poissy mais au Maroc pour les versions thermiques et en Slovaquie pour l''e-208. Depuis 2023, les versions hybrides et électriques sont produites exclusivement en Espagne.
+        La nouvelle 208 inaugure la nouvelle plate-forme technique modulaire CMP (Common Modular Platform) du Groupe PSA qui équipe déjà sa cousine la DS 3 Crossback. 
+        Elle est disponible avec une boîte de vitesses manuelle à 6 rapports (voire 5 rapports sur le moteur PureTech 75) ou en option avec une boîte automatique à 8 rapports (EAT8) sur les versions les plus puissantes. 
+        La 208 propose deux types de projecteurs, traditionnels en entrée de gamme et 100 % LED en haut de gamme. Sur les versions GT Line et GT (GT à partir de 2020 et GT PACK de 2020 a 2022), les passages de roues sont protégés par des éléments en noir laqué. 
+        La Peugeot 208 est équipée de l’i-Cockpit constitué de l''instrumentation en hauteur, d''un petit volant à double méplat et d''un écran tactile. 
+        L''instrumentation, selon le niveau de finition, peut être constituée d''un écran numérique 100 % 3D, tandis que la planche de bord est équipée d''un écran tactile pour l''info-divertissement et la navigation dont la taille varie en fonction du niveau de finition (13,18 ou 26 cm).',
+        'https://upload.wikimedia.org/wikipedia/commons/f/f3/2020_Peugeot_208_GT_Line_PureTech_1.2_Front.jpg',
+        2012,
+        0,
+        'France'
+    ),
+    (
+        'Peugeot',
+        '3008',
+        'Le Peugeot 3008 est un SUV compact du constructeur automobile français Peugeot. Il est présenté au Mondial de l''automobile de Paris 2008 et commercialisé à partir d''avril 2009.
+        Il y a trois générations : la Peugeot 3008 I (2008-2016, 2020 en Chine), la Peugeot 3008 II (2016) et la Peugeot 3008 III (2023). 
+        La 3e génération de Peugeot 3008, conçue et fabriquée en France, est présentée officiellement le 12 septembre 2023. 
+        Le SUV permet une conduite semi-autonome avec des aides à la conduite telles que le changement de voie semi-automatique, l''alerte de trafic transversal ou encore la surveillance d''angle mort à longue portée. 
+        La version électrique reçoit notamment un planificateur d''itinéraire nommé EV Trip Planner.
+        La 3008 est le premier véhicule de série à être construit sur la plate-forme technique STLA Medium (une évolution de la plate-forme EMP2) du groupe Stellantis. 
+        Les batteries des versions électrique à traction sont fournies par FinDreams, une filiale du constructeur automobile chinois BYD. 
+        Dès 2025, les versions les plus performantes auront des batteries fabriquées à Billy-Berclau par Automotive Cells Company, une co-entreprise entre Stellantis, Mercedes-Benz et TotalEnergies. 
+        Le nouveau 3008 dispose uniquement de motorisations hybrides ou 100 % électriques.',
+        'https://upload.wikimedia.org/wikipedia/commons/6/63/Peugeot_e-3008_Auto_Zuerich_2023_1X7A1030.jpg',
+        2009,
+        0,
+        'France'
+    ),
+    (
+        'Citroën',
+        'C3',
+        'La Citroën C3 est une automobile de la marque Citroën. Elle est présentée au Mondial de l''automobile de Paris 2001 et commercialisée à partir de novembre 2001.
+        La Citroën C3 est une voiture polyvalente, elle est disponible en version 3 ou 5 portes.
+        La C3 est produite à Poissy, en France, et à Porto Real, au Brésil. La C3 est la première voiture de la marque à adopter le nouveau logo de Citroën, en 2009.
+        La première génération est présentée en 2002 et elle est déclinée en cabriolet appelée C3 Pluriel. La deuxième génération est présentée en 2009 et se décline dans une version 3 portes appelée DS3. 
+        La troisième génération est présentée en 2016. La quatrième génération est présentée en 2023, celle-ci devient un crossover urbain et dérive de la C3 CC21, sortie en Inde et au Brésil. 
+        La dénomination C3 est aussi utilisée pour désigner un minispace, le C3 Picasso présenté en 2008, ainsi que plusieurs crossovers, le C3 Aircross (qui dérive du C3 Picasso) présenté en 2010 pour le marché sud-américain, le C3-XR, présenté en 2014 et développé pour la Chine, le C3 Aircross présenté en 2017 et destiné prioritairement à l''Europe, la C3L qui est un dérivé tricorps de la C3-XR, la C3 CC21 pour le marché brésilien et indien présentée en 2022 et enfin, la C3 IV présentée en 2023 pour le marché européen et qui est un dérivé de la C3 CC21.',
+        'https://upload.wikimedia.org/wikipedia/commons/b/b8/2022_Citro%C3%ABn_C3_Feel_Puretech_110_%28India%29_front_view_01.png',
+        2001,
+        0,
+        'France'
     );
 -- Insertion de données dans la table Marques
 INSERT INTO Marques (

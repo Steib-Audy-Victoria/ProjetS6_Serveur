@@ -25,12 +25,12 @@ CREATE TABLE Pays (
 -- Table Voitures
 CREATE TABLE Voitures (
     VoitureID INTEGER PRIMARY KEY,
-    imgVoiture VARCHAR(255) NOT NULL,
-    Info VARCHAR(255) NOT NULL,
     Marque VARCHAR(255) NOT NULL,
     Modele VARCHAR(255) NOT NULL,
-    AnneeFabrication INTEGER NOT NULL,
-    Carburant VARCHAR(255) NOT NULL,
+    Info VARCHAR(255) NOT NULL,
+    imgVoiture VARCHAR(255) NOT NULL,
+    AnneeDebutFabrication INTEGER NOT NULL,
+    AnneeFinFabrication INTEGER NOT NULL,
     NomPays INTEGER NOT NULL,
     FOREIGN KEY (NomPays) REFERENCES Pays(NomPays)
 );
