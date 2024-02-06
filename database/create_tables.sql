@@ -31,8 +31,19 @@ CREATE TABLE Voitures (
     Modele VARCHAR(255) NOT NULL,
     AnneeFabrication INTEGER NOT NULL,
     Carburant VARCHAR(255) NOT NULL,
-    PaysID INTEGER NOT NULL,
-    FOREIGN KEY (PaysID) REFERENCES Pays(PaysID)
+    NomPays INTEGER NOT NULL,
+    FOREIGN KEY (NomPays) REFERENCES Pays(NomPays)
+);
+-- Table Marques
+CREATE TABLE Marques (
+    MarqueID INTEGER PRIMARY KEY,
+    NomMarque VARCHAR(255) UNIQUE NOT NULL,
+    LogoMarque VARCHAR(255) NOT NULL,
+    InfosMarque VARCHAR(255) NOT NULL,
+    AnneeCreation INTEGER NOT NULL,
+    AnneeDisparition INTEGER NOT NULL,
+    NomPays INTEGER NOT NULL,
+    FOREIGN KEY (NomPays) REFERENCES Pays(NomPays)
 );
 -- Table AvisUtilisateurs
 CREATE TABLE AvisUtilisateurs (

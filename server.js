@@ -136,8 +136,8 @@ app.get('/pays', (req, res) => {
 app.get('/pays/nom/:NomPays', (req, res) => {
   const NomPays = req.params.NomPays;
 
-  const query = 'SELECT * FROM Pays WHERE NomPays = ?';
-  db.get(query, [NomPays], (err, result) => {
+  const queryPays = 'SELECT * FROM Pays WHERE NomPays = ?';
+  db.get(queryPays, [NomPays], (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -146,7 +146,18 @@ app.get('/pays/nom/:NomPays', (req, res) => {
       return res.status(404).json({ error: 'Pays non trouvé' });
     }
 
+    // Requête SQL pour récupérer les marques de voiture correspondant au pays
+    const queryMarques = 'SELECT * FROM Marques WHERE NomPays = ?';
+    db.all(queryMarques, [NomPays], (err, marques) => {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+
+      // Ajoutez les marques de voiture aux détails du pays
+      result.marques = marques;
+
     res.json(result);
+    });
   });
 });
 

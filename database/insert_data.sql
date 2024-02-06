@@ -2166,7 +2166,7 @@ INSERT INTO Voitures (
         Modele,
         AnneeFabrication,
         Carburant,
-        PaysID
+        NomPays
     )
 VALUES (
         ' lien_image_voiture.jpg ',
@@ -2175,7 +2175,7 @@ VALUES (
         ' Clio ',
         2020,
         ' Essence ',
-        1
+        'France'
     ),
     (
         ' lien_image_voiture.jpg ',
@@ -2184,7 +2184,128 @@ VALUES (
         ' Corolla ',
         2019,
         ' Essence ',
-        2
+        'Japon'
+    );
+-- Insertion de données dans la table Marques
+INSERT INTO Marques (
+        NomMarque,
+        LogoMarque,
+        InfosMarque,
+        AnneeCreation,
+        AnneeDisparition,
+        NomPays
+    )
+VALUES (
+        'Peugeot',
+        'https://upload.wikimedia.org/wikipedia/commons/f/f7/Peugeot_Logo.svg',
+        'Peugeot est un constructeur automobile français filiale du groupe Stellantis. L''entreprise Peugeot est à l''origine du Groupe PSA qui englobe également Citroën, achetée à Michelin en 1976, DS, fondée en 2014, ainsi que Vauxhall et sa sœur allemande Opel (anciennement GM Europe). Peugeot produit essentiellement des véhicules automobiles pour particuliers, des utilitaires ainsi que des deux-roues.',
+        1810,
+        0,
+        'France'
+    ),
+    (
+        'Renault',
+        'https://upload.wikimedia.org/wikipedia/commons/b/b7/Renault_2021_Text.svg',
+        'Renault est un constructeur automobile français. Il est lié aux constructeurs japonais Nissan depuis 1999 et Mitsubishi depuis 2017, à travers l''alliance Renault-Nissan-Mitsubishi, dont le siège social se situe au Pays-Bas. L''entreprise est nationalisée à la fin de la Seconde Guerre mondiale.',
+        1899,
+        0,
+        'France'
+    ),
+    (
+        'DS Automobiles',
+        'https://upload.wikimedia.org/wikipedia/fr/2/25/DS_Automobiles_2019_Logo.svg',
+        'DS Automobiles est une marque automobile française créée en 2014. Elle est une filiale du groupe PSA.',
+        2014,
+        0,
+        'France'
+    ),
+    (
+        'Citroën',
+        'https://upload.wikimedia.org/wikipedia/commons/d/dd/Citroen_2022.svg',
+        'Citroën est un constructeur automobile français fondé en 1919 par André Citroën. Il fait partie du groupe PSA depuis 1976.',
+        1919,
+        0,
+        'France'
+    ),
+    (
+        'Alpine',
+        'https://upload.wikimedia.org/wikipedia/fr/1/1f/Alpine.svg',
+        'Alpine est un constructeur automobile français fondé en 1955 par Jean Rédélé, à Dieppe, en Normandie. La marque est rachetée par Renault en 1973.',
+        1955,
+        0,
+        'France'
+    ),
+    (
+        'Bugatti',
+        'https://upload.wikimedia.org/wikipedia/commons/3/34/2022_Bugatti_wordmark.svg',
+        'Bugatti est un constructeur d''automobile hyper-sportives de grand luxe d''origine francaise fondé en 1909 par Ettore Bugatti. La marque est rachetée par Volkswagen en 1998, et appartenant à 55 % au groupe croate Rimac Automobili depuis son rachat en 2021.',
+        1909,
+        0,
+        'France'
+    ),
+    (
+        'Simca',
+        'https://upload.wikimedia.org/wikipedia/fr/3/34/Simca_1958-1980_Logo.svg',
+        'Simca était, à l''origine, une firme automobile franco-italienne, créée en 1934 par Fiat pour produire des voitures en France.',
+        1934,
+        1970,
+        'France'
+    ),
+    (
+        'Talbot',
+        'https://upload.wikimedia.org/wikipedia/fr/7/74/Talbot_1977-1995_Logo.svg',
+        'Talbot est une marque automobile française créée en 1903. Elle a été rachetée par Peugeot en 1978.',
+        1903,
+        1986,
+        'France'
+    ),
+    (
+        'Panhard',
+        'https://upload.wikimedia.org/wikipedia/commons/3/3d/Panhard_General_Defense_Logo.svg',
+        'Panhard est un constructeur automobile français fondé en 1887 par René Panhard et Émile Levassor. La marque est rachetée par Citroën en 1965.',
+        1887,
+        1967,
+        'France'
+    ),
+    (
+        'Matra',
+        'https://upload.wikimedia.org/wikipedia/fr/2/2a/Matra_2021.svg',
+        'Matra est un constructeur automobile français, devenu par la suite un groupe industriel français, qui a été créé en 1964 par Jean-Luc Lagardère.',
+        1964,
+        2003,
+        'France'
+    ),
+    (
+        'Facel Vega',
+        'https://upload.wikimedia.org/wikipedia/fr/c/ce/Facel_Vega_Logo_1.svg',
+        'Facel Vega est une ancienne marque française d''automobiles de sport et de prestige, apparue au salon de l''Auto à Paris en octobre 1954 et disparue en octobre 1964.',
+        1954,
+        1964,
+        'France'
+    ),
+    (
+        'Delahaye',
+        'https://upload.wikimedia.org/wikipedia/commons/e/e7/LogoCD.JPG',
+        'Delahaye était un constructeur français d''automobiles de luxe, de poids lourds et de véhicules d''incendie, pionnier de l''automobile depuis 1895. Créé en 1894 par Émile Delahaye, la marque est rachetée par Hotchkiss en 1954.',
+        1894,
+        1954,
+        'France'
+    ),
+    (
+        'Chrysler',
+        'https://upload.wikimedia.org/wikipedia/fr/b/b1/Chrysler_logo.png',
+        'Chrysler est un constructeur automobile américain fondé en 1925 par Walter Chrysler. La marque est rachetée par Fiat en 2014.',
+        1925,
+        2014,
+        'États-Unis'
+    ),
+    (
+        'Ford',
+        'https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg',
+        'Ford Motor Company est une entreprise multinationale américaine. Basée à Dearborn, une banlieue de Détroit dans le Michigan, aux États-Unis, elle est fondée par Henry Ford le 16 juin 1903. La société est connue pour avoir révolutionné les chaînes de montage de production en série.',
+        1903,
+        0,
+        'États-Unis'
     );
 -- Insertion de données dans la table AvisUtilisateurs
 INSERT INTO AvisUtilisateurs (
