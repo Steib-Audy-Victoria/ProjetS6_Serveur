@@ -161,6 +161,27 @@ app.get('/pays/nom/:NomPays', (req, res) => {
   });
 });
 
+// ----------Liste des marques de voiture --------------
+
+// Récupérer les détails de la marque par ID
+app.get('/marque/:id', (req, res) => {
+  const id = req.params.id;
+
+  const query = 'SELECT * FROM Marques WHERE MarqueID = ?';
+  db.get(query, [id], (err, marque) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    if (!marque) {
+      return res.status(404).json({ error: 'Marque non trouvée' });
+    }
+
+    res.json(marque);
+  });
+});
+
+
 
 
 
