@@ -221,7 +221,7 @@ app.get('/ventes-voitures-marques/:nomPays', (req, res) => {
 
   // Requête SQL pour récupérer les données de ventes de voitures par marque pour le pays spécifié
   const query = `
-    SELECT NomMarque, NbVentes
+    SELECT NomMarque, NbVentes, AnneeVentes
     FROM NbVentesVoituresByMarques
     WHERE NomPays = ?
   `;

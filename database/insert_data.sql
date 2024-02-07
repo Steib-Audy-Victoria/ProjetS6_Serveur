@@ -2237,60 +2237,66 @@ INSERT INTO NbVentesVoituresByMarques (
         AnneeVentes,
         NomPays
     )
-VALUES (
-        'Renault',
-        277914,
-        2023,
-        'France'
-    ),
-    (
-        'Peugeot',
-        241512,
-        2023,
-        'France'
-    ),
-    (
-        'Dacia',
-        156390,
-        2023,
-        'France'
-    ),
-    (
-        'Citroën',
-        125932,
-        2023,
-        'France'
-    ),
-    (
-        'Volskwagen',
-        120225,
-        2023,
-        'France'
-    ),
-    (
-        'Toyota',
-        107950,
-        2023,
-        'France'
-    ),
-    (
-        'Tesla',
-        63041,
-        2023,
-        'France'
-    ),
-    (
-        'BMW',
-        59601,
-        2023,
-        'France'
-    ),
-    (
-        'Mercedes',
-        51836,
-        2023,
-        'France'
-    );
+VALUES ('Renault', 277914, 2023, 'France'),
+    ('Peugeot', 241512, 2023, 'France'),
+    ('Dacia', 156390, 2023, 'France'),
+    ('Citroën', 125932, 2023, 'France'),
+    ('Volkswagen', 120225, 2023, 'France'),
+    ('Toyota', 107950, 2023, 'France'),
+    ('Tesla', 63041, 2023, 'France'),
+    ('BMW', 59601, 2023, 'France'),
+    ('Mercedes', 51836, 2023, 'France'),
+    ('Ford', 51649, 2023, 'France'),
+    ('Audi', 49417, 2023, 'France'),
+    ('Hyundai', 49400, 2023, 'France'),
+    ('Kia', 49192, 2023, 'France'),
+    ('Opel', 43237, 2023, 'France'),
+    ('Fiat', 40336, 2023, 'France'),
+    ('Peugeot', 245608, 2022, 'France'),
+    ('Renault', 236405, 2022, 'France'),
+    ('Dacia', 130855, 2022, 'France'),
+    ('Citroën', 129883, 2022, 'France'),
+    ('Toyota', 100268, 2022, 'France'),
+    ('Volkswagen', 97292, 2022, 'France'),
+    ('Mercedes', 47977, 2022, 'France'),
+    ('Hyundai', 47106, 2022, 'France'),
+    ('Ford', 47095, 2022, 'France'),
+    ('Kia', 46224, 2022, 'France'),
+    ('BMW', 45439, 2022, 'France'),
+    ('Audi', 43687, 2022, 'France'),
+    ('Fiat', 36508, 2022, 'France'),
+    ('Opel', 36052, 2022, 'France'),
+    ('Tesla', 29199, 2022, 'France'),
+    ('Peugeot', 285929, 2021, 'France'),
+    ('Renault', 268951, 2021, 'France'),
+    ('Citroën', 161883, 2021, 'France'),
+    ('Dacia', 125204, 2021, 'France'),
+    ('Volkswagen', 105298, 2021, 'France'),
+    ('Toyota', 96170, 2021, 'France'),
+    ('Mercedes', 50789, 2021, 'France'),
+    ('Audi', 50083, 2021, 'France'),
+    ('BMW', 45968, 2021, 'France'),
+    ('Hyundai', 45241, 2021, 'France'),
+    ('Kia', 44215, 2021, 'France'),
+    ('Ford', 43777, 2021, 'France'),
+    ('Fiat', 39914, 2021, 'France'),
+    ('Opel', 37393, 2021, 'France'),
+    ('Tesla', 26446, 2021, 'France'),
+    ('Renault', 314630, 2020, 'France'),
+    ('Peugeot', 301935, 2020, 'France'),
+    ('Citroën', 162688, 2020, 'France'),
+    ('Volkswagen', 97784, 2020, 'France'),
+    ('Dacia', 97170, 2020, 'France'),
+    ('Toyota', 89727, 2020, 'France'),
+    ('Ford', 55219, 2020, 'France'),
+    ('Mercedes', 52570, 2020, 'France'),
+    ('BMW', 45478, 2020, 'France'),
+    ('Audi', 45360, 2020, 'France'),
+    ('Opel', 43801, 2020, 'France'),
+    ('Fiat', 42360, 2020, 'France'),
+    ('Kia', 39052, 2020, 'France'),
+    ('Hyundai', 34585, 2020, 'France'),
+    ('Tesla', 7372, 2020, 'France');
 -- Insertion de données dans la table Marques
 INSERT INTO Marques (
         NomMarque,
