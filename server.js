@@ -213,6 +213,31 @@ app.get('/voiture/:id', (req, res) => {
 });
 
 
+// ----------Liste des voitures par marque --------------
+
+// Récupérer les données de ventes de voitures par marque pour un pays spécifique
+app.get('/ventes-voitures-marques/:nomPays', (req, res) => {
+  const nomPays = req.params.nomPays;
+
+  // Requête SQL pour récupérer les données de ventes de voitures par marque pour le pays spécifié
+  const query = `
+    SELECT NomMarque, NbVentes
+    FROM NbVentesVoituresByMarques
+    WHERE NomPays = ?
+  `;
+
+  // Exécuter la requête avec le nom du pays spécifié
+  db.all(query, [nomPays], (err, rows) => {
+    if (err) {
+      console.error('Erreur lors de la récupération des données de ventes par marque', err);
+      res.status(500).json({ error: 'Erreur lors de la récupération des données de ventes par marque' });
+    } else {
+      res.json(rows); // Renvoyer les données récupérées en tant que JSON
+    }
+  });
+});
+
+
 
 // ----------------------------------------
 

@@ -2230,6 +2230,67 @@ VALUES (
         0,
         'France'
     );
+-- Insertion de données dans la table Nombre de voitures vendu par marque par annee et par pays
+INSERT INTO NbVentesVoituresByMarques (
+        NomMarque,
+        NbVentes,
+        AnneeVentes,
+        NomPays
+    )
+VALUES (
+        'Renault',
+        277914,
+        2023,
+        'France'
+    ),
+    (
+        'Peugeot',
+        241512,
+        2023,
+        'France'
+    ),
+    (
+        'Dacia',
+        156390,
+        2023,
+        'France'
+    ),
+    (
+        'Citroën',
+        125932,
+        2023,
+        'France'
+    ),
+    (
+        'Volskwagen',
+        120225,
+        2023,
+        'France'
+    ),
+    (
+        'Toyota',
+        107950,
+        2023,
+        'France'
+    ),
+    (
+        'Tesla',
+        63041,
+        2023,
+        'France'
+    ),
+    (
+        'BMW',
+        59601,
+        2023,
+        'France'
+    ),
+    (
+        'Mercedes',
+        51836,
+        2023,
+        'France'
+    );
 -- Insertion de données dans la table Marques
 INSERT INTO Marques (
         NomMarque,

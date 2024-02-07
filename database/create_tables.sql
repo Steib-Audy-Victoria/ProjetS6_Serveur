@@ -45,6 +45,16 @@ CREATE TABLE Marques (
     NomPays INTEGER NOT NULL,
     FOREIGN KEY (NomPays) REFERENCES Pays(NomPays)
 );
+-- Table Nombre de voitures vendu par marque par annee et par pays
+CREATE TABLE NbVentesVoituresByMarques (
+    VentesMarquesID INTEGER PRIMARY KEY,
+    NomMarque INTEGER NOT NULL,
+    NbVentes INTEGER NOT NULL,
+    AnneeVentes INTEGER NOT NULL,
+    NomPays INTEGER NOT NULL,
+    FOREIGN KEY (NomMarque) REFERENCES Marques(NomMarque),
+    FOREIGN KEY (NomPays) REFERENCES Pays(NomPays)
+);
 -- Table AvisUtilisateurs
 CREATE TABLE AvisUtilisateurs (
     AvisID INTEGER PRIMARY KEY,
