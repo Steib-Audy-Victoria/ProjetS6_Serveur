@@ -116,6 +116,49 @@ function verifierToken(req, res, next) {
   });
 }
 
+// ---------- PROFIL UTILISATEUR --------------
+
+// Récupérer les informations du profil utilisateur
+app.get('/profil', verifierToken, (req, res) => {
+  const UserID = req.UserID;
+
+  const query = 'SELECT * FROM Utilisateurs WHERE UserID = ?';
+  db.get(query, [UserID], (err, utilisateur) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    if (!utilisateur) {
+      return res.status(404).json({ error: 'Utilisateur non trouvé' });
+    }
+
+    // Ne pas renvoyer le mot de passe dans la réponse
+    delete utilisateur.MotDePasse;
+
+    res.json(utilisateur);
+  });
+});
+
+// Mettre à jour les informations du profil utilisateur
+app.put('/profil-modifier', verifierToken, (req, res) => {
+  const UserID = req.UserID;
+  const { NomUser, Email, PaysID } = req.body;
+
+
+  const query = `
+    UPDATE Utilisateurs 
+    SET NomUser = ?, Email = ?, PaysID = ? 
+    WHERE UserID = ?
+  `;
+  db.run(query, [NomUser, Email, PaysID, UserID], function (err) {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    res.json({ message: 'Profil utilisateur mis à jour avec succès' });
+  });
+});
+
 // ---------- LISTE DES PAYS --------------
 
 // Récupérer la liste des pays
