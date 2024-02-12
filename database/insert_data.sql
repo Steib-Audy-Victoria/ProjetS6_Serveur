@@ -2437,6 +2437,3 @@ VALUES (
         2,
         2
     );
--- Insertion de données dans la table ComparaisonPays
-INSERT INTO ComparaisonPays (PaysID_A, PaysID_B)
-VALUES (1, 2);

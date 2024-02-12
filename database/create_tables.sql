@@ -65,11 +65,3 @@ CREATE TABLE AvisUtilisateurs (
     FOREIGN KEY (UserID) REFERENCES Utilisateurs(UserID),
     FOREIGN KEY (PaysID) REFERENCES Pays(PaysID)
 );
--- Table ComparaisonPays
-CREATE TABLE ComparaisonPays (
-    ComparaisonID INTEGER PRIMARY KEY,
-    PaysID_A INTEGER NOT NULL,
-    PaysID_B INTEGER NOT NULL,
-    FOREIGN KEY (PaysID_A) REFERENCES Pays(PaysID),
-    FOREIGN KEY (PaysID_B) REFERENCES Pays(PaysID)
-);
