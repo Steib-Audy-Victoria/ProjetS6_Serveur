@@ -281,6 +281,40 @@ app.get('/ventes-voitures-marques/:NomPays', (req, res) => {
   });
 });
 
+// ---------- Avis Utilisateurs --------------
+
+// Ajouter un avis utilisateur
+app.post('/avis-utilisateurs', verifierToken, (req, res) => {
+  const { Note, Commentaire, PaysID } = req.body;
+  const UserID = req.UserID;
+
+  const query = 'INSERT INTO AvisUtilisateurs (Note, Commentaire, UserID, PaysID) VALUES (?, ?, ?, ?)';
+  db.run(query, [Note, Commentaire, UserID, PaysID], function (err) {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json({ message: 'Avis utilisateur ajouté avec succès' });
+  });
+});
+
+// Récupérer les avis utilisateurs pour un pays spécifique avec les noms d'utilisateurs
+app.get('/avis-utilisateurs/:PaysID', (req, res) => {
+  const PaysID = req.params.PaysID;
+
+  const query = `
+    SELECT AvisUtilisateurs.*, Utilisateurs.NomUser AS NomUtilisateur
+    FROM AvisUtilisateurs
+    INNER JOIN Utilisateurs ON AvisUtilisateurs.UserID = Utilisateurs.UserID
+    WHERE AvisUtilisateurs.PaysID = ?
+  `;
+  db.all(query, [PaysID], (err, avis) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(avis);
+  });
+});
+
 
 
 // ----------------------------------------
