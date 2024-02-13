@@ -218,6 +218,19 @@ app.get('/pays/nom/:NomPays', (req, res) => {
 
 // ----------Liste des marques de voiture --------------
 
+// Récupérer la liste des marques de voitures
+app.get('/marques', (req, res) => {
+  const query = 'SELECT * FROM Marques';
+
+  db.all(query, [], (err, marques) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    res.json({ marques });
+  });
+});
+
 // Récupérer les détails de la marque par ID
 app.get('/marque/:id', (req, res) => {
   const id = req.params.id;
@@ -237,6 +250,19 @@ app.get('/marque/:id', (req, res) => {
 });
 
 // ----------Liste des voitures --------------
+
+// Récupérer la liste des voitures
+app.get('/voitures', (req, res) => {
+  const query = 'SELECT * FROM Voitures';
+
+  db.all(query, [], (err, voitures) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    res.json({ voitures });
+  });
+});
 
 // Récupérer les détails de la voiture par ID
 app.get('/voiture/:id', (req, res) => {
