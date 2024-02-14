@@ -2274,6 +2274,51 @@ VALUES (
         1984,
         2019,
         'Inde'
+    ),
+    (
+        'Volkswagen',
+        'Golf',
+        'La Volkswagen Golf est une automobile du constructeur allemand Volkswagen. Elle est présentée en 1974 et commercialisée à partir de 1975. La Golf est produite en Allemagne.',
+        'https://upload.wikimedia.org/wikipedia/commons/e/e3/VW_Golf_1.2_TSI_BlueMotion_Technology_Comfortline_%28VII%29_%E2%80%93_Frontansicht%2C_4._Januar_2014%2C_D%C3%BCsseldorf.jpg',
+        1974,
+        0,
+        'Allemagne'
+    ),
+    (
+        'Volkswagen',
+        'Polo',
+        'La Volkswagen Polo est une automobile du constructeur allemand Volkswagen. Elle est présentée en 1975 et commercialisée à partir de 1976. La Polo est produite en Allemagne.',
+        'https://upload.wikimedia.org/wikipedia/commons/d/d4/2018_Volkswagen_Polo_SE_1.0_Front.jpg',
+        1975,
+        0,
+        'Allemagne'
+    ),
+    (
+        'Volkswagen',
+        'Tiguan',
+        'La Volkswagen Tiguan est un SUV du constructeur allemand Volkswagen. Elle est présentée en 2007 et commercialisée à partir de 2008. La Tiguan est produite en Allemagne.',
+        'https://upload.wikimedia.org/wikipedia/commons/7/79/VW_Tiguan_2.0_TDI_front_20100801.jpg',
+        2007,
+        0,
+        'Allemagne'
+    ),
+    (
+        'Volkswagen',
+        'Coccinelle',
+        'La Volkswagen Coccinelle est une automobile du constructeur allemand Volkswagen. Elle est présentée en 1938 et commercialisée à partir de 1938. La Coccinelle est produite en Allemagne.',
+        'https://upload.wikimedia.org/wikipedia/commons/9/90/Volkswagen_Beetle_5.jpg',
+        1938,
+        2003,
+        'Allemagne'
+    ),
+    (
+        'Audi',
+        'A1',
+        'L''Audi A1 est une automobile du constructeur allemand Audi. Elle est présentée en 2010 et commercialisée à partir de 2010. L''A1 est produite en Belgique.',
+        'https://upload.wikimedia.org/wikipedia/commons/0/0e/Audi_A1_Sportback_GB_IMG_6024.jpg',
+        2010,
+        0,
+        'Allemagne'
     );
 -- Insertion de données dans la table Nombre de voitures vendu par marque par annee et par pays
 INSERT INTO NbVentesVoituresByMarques (
@@ -2353,7 +2398,43 @@ VALUES ('Renault', 277914, 2023, 'France'),
     ('Tata Motors', 407112, 2023, 'Inde'),
     ('Hyundai', 444252, 2023, 'Inde'),
     ('Kia', 195972, 2023, 'Inde'),
-    ('Renault', 106920, 2023, 'Inde');
+    ('Renault', 106920, 2023, 'Inde'),
+    ('Audi', 246880, 2023, 'Allemagne'),
+    ('BMW', 233160, 2023, 'Allemagne'),
+    ('Ford', 116578, 2023, 'Allemagne'),
+    ('Hyundai', 106381, 2023, 'Allemagne'),
+    ('Mercedes', 277352, 2023, 'Allemagne'),
+    ('Opel', 144901, 2023, 'Allemagne'),
+    ('Seat', 132624, 2023, 'Allemagne'),
+    ('Skoda', 168521, 2023, 'Allemagne'),
+    ('Volkswagen', 519089, 2023, 'Allemagne'),
+    ('Tesla', 63685, 2023, 'Allemagne'),
+    ('Peugeot', 46836, 2023, 'Allemagne'),
+    ('Renault', 68312, 2023, 'Allemagne'),
+    ('Audi', 213934, 2020, 'Allemagne'),
+    ('BMW', 240968, 2020, 'Allemagne'),
+    ('Ford', 194250, 2020, 'Allemagne'),
+    ('Hyundai', 105051, 2020, 'Allemagne'),
+    ('Mercedes', 303185, 2020, 'Allemagne'),
+    ('Opel', 146219, 2020, 'Allemagne'),
+    ('Seat', 114564, 2020, 'Allemagne'),
+    ('Skoda', 181198, 2020, 'Allemagne'),
+    ('Volkswagen', 519089, 2020, 'Allemagne'),
+    ('Tesla', 16694, 2020, 'Allemagne'),
+    ('Peugeot', 55401, 2020, 'Allemagne'),
+    ('Renault', 125318, 2020, 'Allemagne'),
+    ('Audi', 267195, 2019, 'Allemagne'),
+    ('BMW', 279243, 2019, 'Allemagne'),
+    ('Ford', 279719, 2019, 'Allemagne'),
+    ('Hyundai', 129508, 2019, 'Allemagne'),
+    ('Mercedes', 339185, 2019, 'Allemagne'),
+    ('Opel', 215864, 2019, 'Allemagne'),
+    ('Seat', 138670, 2019, 'Allemagne'),
+    ('Skoda', 208171, 2019, 'Allemagne'),
+    ('Volkswagen', 667518, 2019, 'Allemagne'),
+    ('Tesla', 10711, 2019, 'Allemagne'),
+    ('Peugeot', 72709, 2019, 'Allemagne'),
+    ('Renault', 131138, 2019, 'Allemagne');
 -- Insertion de données dans la table Marques
 INSERT INTO Marques (
         NomMarque,
