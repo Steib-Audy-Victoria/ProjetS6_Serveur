@@ -2229,6 +2229,51 @@ VALUES (
         2001,
         0,
         'France'
+    ),
+    (
+        'Tata Motors',
+        'Tata Nano',
+        'La Tata Nano est une voiture citadine produite par le constructeur automobile indien Tata Motors. Elle est présentée le 10 janvier 2008 à New Delhi, en Inde, et commercialisée à partir de 2009.',
+        'https://upload.wikimedia.org/wikipedia/commons/6/67/Nano.jpg',
+        2009,
+        2018,
+        'Inde'
+    ),
+    (
+        'Tata Motors',
+        'Tata Safari',
+        'La Tata Safari est un SUV produit par le constructeur automobile indien Tata Motors. Il est présenté en 1998 et commercialisé à partir de 1999.',
+        'https://upload.wikimedia.org/wikipedia/commons/3/3e/Tata_Safari_Storme_%28front%29%2C_Denpasar.jpg',
+        1999,
+        0,
+        'Inde'
+    ),
+    (
+        'Tata Motors',
+        'Nexon',
+        'La Tata Nexon est un SUV produit par le constructeur automobile indien Tata Motors. Il est présenté en 2016 et commercialisé à partir de 2017. Il s''agit du premier crossover de la marque et occupe le segment des crossover SUV de moins de 4 mètres en Inde',
+        'https://upload.wikimedia.org/wikipedia/commons/8/88/2018_Tata_Nexon_XM.jpg',
+        2017,
+        0,
+        'Inde'
+    ),
+    (
+        'Maruti Suzuki',
+        'Swift',
+        'La Suzuki Swift est une automobile du constructeur japonais Suzuki. Elle est présentée en 2004 et commercialisée à partir de 2005. La Swift est produite en Inde par Maruti Suzuki.',
+        'https://upload.wikimedia.org/wikipedia/commons/b/b5/Suzuki_Swift_front_20080822.jpg',
+        2004,
+        0,
+        'Inde'
+    ),
+    (
+        'Maruti Suzuki',
+        'Omni',
+        'Le Maruti Omni est un mini-bus du constructeur automobile indo-japonais Maruti Suzuki vendu en Inde. Il est plus court de 6 cm qu''une Peugeot 107 et il peut transporter 8 personnes.',
+        'https://upload.wikimedia.org/wikipedia/commons/8/8e/Maruti_Omni.jpg',
+        1984,
+        2019,
+        'Inde'
     );
 -- Insertion de données dans la table Nombre de voitures vendu par marque par annee et par pays
 INSERT INTO NbVentesVoituresByMarques (
@@ -2296,7 +2341,19 @@ VALUES ('Renault', 277914, 2023, 'France'),
     ('Fiat', 42360, 2020, 'France'),
     ('Kia', 39052, 2020, 'France'),
     ('Hyundai', 34585, 2020, 'France'),
-    ('Tesla', 7372, 2020, 'France');
+    ('Tesla', 7372, 2020, 'France'),
+    ('Maruti Suzuki', 1213656, 2020, 'Inde'),
+    ('Mahindra', 136500, 2020, 'Inde'),
+    ('Tata Motors', 170151, 2020, 'Inde'),
+    ('Hyundai', 423642, 2020, 'Inde'),
+    ('Kia', 140505, 2020, 'Inde'),
+    ('Renault', 80518, 2020, 'Inde'),
+    ('Maruti Suzuki', 1307892, 2023, 'Inde'),
+    ('Mahindra', 240408, 2023, 'Inde'),
+    ('Tata Motors', 407112, 2023, 'Inde'),
+    ('Hyundai', 444252, 2023, 'Inde'),
+    ('Kia', 195972, 2023, 'Inde'),
+    ('Renault', 106920, 2023, 'Inde');
 -- Insertion de données dans la table Marques
 INSERT INTO Marques (
         NomMarque,
@@ -2417,6 +2474,94 @@ VALUES (
         1903,
         0,
         'États-Unis'
+    ),
+    (
+        'Tata Motors',
+        'https://upload.wikimedia.org/wikipedia/commons/f/f1/Tata_Motors_Logo.svg',
+        'Tata Motors est une entreprise indienne de construction automobile. Elle fait partie du groupe Tata, l''un des plus grands conglomérats indiens.',
+        1945,
+        0,
+        'Inde'
+    ),
+    (
+        'Mahindra',
+        'https://upload.wikimedia.org/wikipedia/commons/8/82/Mahindra_Auto.png',
+        'Mahindra & Mahindra Limited est une entreprise indienne de construction automobile. Elle fait partie du groupe Mahindra, l''un des plus grands conglomérats indiens.',
+        1945,
+        0,
+        'Inde'
+    ),
+    (
+        'Maruti Suzuki',
+        'https://upload.wikimedia.org/wikipedia/commons/1/1e/Maruti_logo.png',
+        'Maruti Suzuki India Limited est une entreprise indienne de construction automobile. Elle fait partie du groupe Suzuki, l''un des plus grands conglomérats japonais.',
+        1981,
+        0,
+        'Inde'
+    ),
+    (
+        'Hindustan Motors',
+        'https://upload.wikimedia.org/wikipedia/commons/b/ba/Hindustan_Motors.svg',
+        'Hindustan Motors est une entreprise indienne de construction automobile. Elle fait partie du groupe Birla, l''un des plus grands conglomérats indiens.',
+        1942,
+        0,
+        'Inde'
+    ),
+    (
+        'Ashok Leyland',
+        'https://upload.wikimedia.org/wikipedia/commons/1/15/Ashok_Leyland_Logo.JPG',
+        'Ashok Leyland est une entreprise indienne de construction automobile. Elle fait partie du groupe Hinduja, l''un des plus grands conglomérats indiens.',
+        1948,
+        0,
+        'Inde'
+    ),
+    (
+        'Bajaj Auto',
+        'https://upload.wikimedia.org/wikipedia/commons/3/3b/Bajaj_Auto_logo.svg',
+        'Bajaj Auto est une entreprise indienne de construction automobile. Elle fait partie du groupe Bajaj, l''un des plus grands conglomérats indiens.',
+        1945,
+        0,
+        'Inde'
+    ),
+    (
+        'Porsche',
+        'https://upload.wikimedia.org/wikipedia/fr/e/e7/Logo_Porsche.svg',
+        'Porsche est un constructeur automobile allemand fondé en 1931 par Ferdinand Porsche, sous le nom de Dr. Ing. h.c. F. Porsche GmbH. La marque est rachetée par Volkswagen en 2012.',
+        1931,
+        0,
+        'Allemagne'
+    ),
+    (
+        'Mercedes-Benz',
+        'https://upload.wikimedia.org/wikipedia/commons/3/32/Mercedes-Benz_Star_2022.svg',
+        'Mercedes-Benz est un constructeur automobile allemand. La marque est rachetée par Daimler AG en 1926.',
+        1926,
+        0,
+        'Allemagne'
+    ),
+    (
+        'BMW',
+        'https://upload.wikimedia.org/wikipedia/commons/f/f4/BMW_logo_%28gray%29.svg',
+        'BMW est un constructeur allemand d''automobiles haut-de-gamme, sportives et luxueuses et de motos, après avoir été un grand constructeur de moteurs d''avions. L''entreprise a été fondée en 1916 par Gustav Otto et Karl Friedrich Rapp. La marque BMW fait partie du Groupe BMW avec Mini et Rolls-Royce. Le siège social et le musée de BMW sont situés à Munich en Allemagne. En 2018, BMW a vendu 2 125 026 véhicules automobiles et 123 495 deux-roues.',
+        1916,
+        0,
+        'Allemagne'
+    ),
+    (
+        'Audi',
+        'https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg',
+        'Audi AG est un constructeur d''automobiles sportives allemand, filiale du groupe Volkswagen appelé VAG (Volkswagen Aktiengesellschaft) qui détient la marque à 99,55 %. Le siège social se situe à Ingolstadt en Bavière. Implanté dans 55 pays du monde, Audi est présent sur la plupart des segments du marché des véhicules particuliers, y compris sur celui des sportives de prestiges grâce à ses deux filiales que sont Lamborghini et Audi Sport. En 2012, l’entreprise a vendu 1 524 635 véhicules, un record depuis sa création en 1909, et se classe parmi les constructeurs les plus rentables. Le nom « Audi » est un jeu de mots entre « audi » (entends ou écoute en latin) et le patronyme du fondateur August Horch (écoute en allemand) qui crée l’entreprise le 16 juillet 1909. ',
+        1965,
+        0,
+        'Allemagne'
+    ),
+    (
+        'Volkswagen',
+        'https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg',
+        'Volkswagen (littéralement : « voiture du peuple ») est un constructeur automobile allemand. La société est initialement créée à l''initiative de l''organisation nazie Front allemand du travail. La marque Volkswagen appartient au Groupe Volkswagen AG qui est en 2018, le premier constructeur mondial de véhicules devant Toyota avec 10,8 millions d''unités vendues. Les origines de la marque se retrouvent dans l’Allemagne nazie des années 1930 avec le projet de construire la voiture populaire qu’allait devenir la Coccinelle.',
+        1937,
+        0,
+        'Allemagne'
     );
 -- Insertion de données dans la table AvisUtilisateurs
 INSERT INTO AvisUtilisateurs (
